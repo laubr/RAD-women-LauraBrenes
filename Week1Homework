@@ -1,49 +1,69 @@
-public with sharing class Welcome {
-    //Welcome!  I'm a comment and I'm here to tell you what this particular class file is for.  The developer who created this class added
-    //me so that future developers, like yourself, would have a quick little introduction to what this class does.
+public with sharing class WeekOneHomework {
+    
+	public static void introToPrimitives() {
 
-    //The two little slashes tell the compiler* that everything following on this line is a note 
-    //for humans and not code that needs to be executed
-    // (* A compiler is the computer program that translates this code into executable computer instructions) 
+        //Primitives are the simplest elements in a programming language
 
-    //But you know what?  This set of comments is already several lines long and getting longer.  I'm tired of typing two slashes every time
+        /* A selection of primitives in Apex:
+        Integer: A number that does not have a decimal point, like 1 or 789 or -34
+        Decimal: A number that includes a decimal point like 1.34 or 456.78907654
+        String: Any set of characters surrounded by single quotes, like 'Apple' or 'I Love Strings' or '2 Legit 2 Quit'
+        Boolean: A value that can only be true, false or null
+        Id: Any valid 18 character Force.com Id (if you set an Id to the 15 digit value it automatically converts it to the 18 character version)
 
-    /*There.  That's better.  the '/*' tells the compiler that there are multiple lines of comments coming.  It knows everything on this line
-    and any following lines
-    and lines
-    and lines
-    and lines will continue to be comments
-    until it sees a */
+        Ok, there's more than those, and you can read all about it here: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_primitives.htm
+        But that's enough to get us started.  Let's start by declaring some variables and initializing them with values
 
-    //Ok, let's get started!
+        //Wait, what do "Declare" and "Initialize" mean??  Let's explain by doing:
+        */
 
-   //This code create two new variables
-   /*
-    * the variable "i" is created as an integer in line #32
-    * the variable "i" gets the "2" value in line #34
-    * the variable "s" is created as a string and gets the value "My String" in line #36
-    */
-    public static void youDoThisPart() {
-        /*Your assignment is to write two comments below this one.  They should describe the few lines of code you se below.
-		Simply describe what the code is doing based on what you learned from readings and in class.
-        Make one as a single line comment using the // notation.  Make the other one a multi line comment using the /* notation.
-        When you're done, save this file so that it is compiled and stored in Salesforce.  */
+        Integer i = 2; //Ok, so what we've done here is tell the computer that we are creating an instance of an integer
+        //(Remember our list of primitives?  Variables have to be a type of primitive.
+        // We are going to call this instance (aka: variable) "i" and we're going to initialize (aka: assign) this variable with the value 2.
+        //When people say Apex is strongly typed, they mean that we have to tell the computer exactly what kind of variable we're creating every time.
 
-		Integer i;
+        //Let's make some more
+        String mySampleString = 'This Awesome String is full of Stringy goodness';
+        //ok, we told the computer that we are creating a variable that can hold any combination of characters.
+        //Now we have a variable that is named mySampleString and which has stored the sentence you see above.
 
-		i = 2;
+        //What if we declare a variable but don't initialize it with a value?
+        Decimal dec;
 
-		String s = 'My String';
+        /*We can totally do that, but that there is no value assigned yet and you'll need to make sure you assign a value later on
+        in your code.  If you don't and you try to use the value of that variable later you'll get an error.
+        let's give it a value so we don't get into trouble. */
+        dec = 12.4;
+        /* Hey, I didn't have to use the word Decimal this time.  Why?
+        Since I declared the variable up on line 31 and named it dec, the computer now knows it's a decimal.  I don't have to tell it again*/
+
+        //One more note on syntax: what's with all the semi-colons?
+        // a ; is how you tell the computer that you're done with a line of code.  Get used to typing lots and lots of semi-colons!!
 
     }
 
-	public static void letsTalkAboutIndents() {
-        //As you look through the sample code in this org, and other places, you'll probably notice it looks pretty tidy
-        //That is the magic of indenting.  Through simply keeping logical groupings indented the same number of spaces
-        //and then indenting sub-sections further, you always know what section you're in
+    public static void primitivesExercise() {
+        //You do this part!
 
-        //Take a look at different classes in the sample code for this org, and even if you're not quite sure what it's doing yet
-        //you should see that the indenting makes logical groupings easier.
+        //1.  Declare three primitives variables, an Integer, a String and a Decimal
+        Integer intVariable;
+        String strVariable;
+        Decimal decVariable;    
+
+        //2.  Assign values to your three new variables
+     	intVariable=16;
+        strVariable='Laura';
+        decVariable=3.14;
+
+        //3.  Print out your variables to the debug log
+		System.debug('Variables: '+intVariable+' '+strVariable+' '+decVariable);
+
+        //4.  Declare an integer variable and assign a value in the same line
+        Integer intVariable2=2;
+
+        //5.  Print out your integer to the debug log
+		System.debug('New integer: '+intVariable2);
+   
     }
 
 }
